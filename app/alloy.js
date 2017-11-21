@@ -9,3 +9,9 @@
 // object. For example:
 //
 // Alloy.Globals.someGlobalFunction = function(){};
+
+
+// Plot Stuff
+
+var plot = require('com.plotprojects.ti');
+plot.initPlot({ notificationFilterEnabled: false });
