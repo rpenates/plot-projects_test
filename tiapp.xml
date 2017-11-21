@@ -37,6 +37,13 @@
 				<false/>
 				<key>UIStatusBarStyle</key>
 				<string>UIStatusBarStyleDefault</string>
+
+				<key>NSLocationAlwaysUsageDescription</key>
+					<string>The app uses your location in order to inform you about special offers in nearby stores.</string>
+				<key>NSLocationWhenInUseUsageDescription</key>
+					<string>The app uses your location in order to filter information shown based on what's near you.</string>
+				<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+					<string>The app uses your location in order to inform you about special offers in nearby stores and customize its content based on what's near.</string>
 			</dict>
 		</plist>
 	</ios>
