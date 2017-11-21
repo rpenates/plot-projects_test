@@ -1,0 +1,26 @@
+"#indexWindowNav": {
+    fullscreen: false,
+    backgroundColor: "#006db8",
+},
+
+"#indexWindow": {
+    backgroundColor: "#FFFFFF",
+    layout: "Vertical",
+    title: "Plot Test",
+    statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT,
+    navTintColor : "#FFFFFF",
+    backButtonTitle: "",
+    barColor: "#006db8",
+    fullscreen: false,
+    titleAttributes:{
+        color: "#FFFFFF"
+    }
+}
+
+"#button1": {
+    title: "Button 1"
+}
+
+"#button2": {
+	title: "Button 2"
+}

@@ -1,0 +1,9 @@
+<Alloy>
+	<NavigationWindow id="indexWindowNav">
+		<Window id="indexWindow" class="container">
+			<Label class="banner" id="contentBanner" />
+			<Button class="bigButton" id="button1" />
+			<Button class="bigButton" id="button2" />
+		</Window>
+	</NavigationWindow>
+</Alloy>
