@@ -13,6 +13,7 @@
 	<guid>0e0ea249-8720-426c-a767-f0e7e0e41a73</guid>
 	<property name="ti.ui.defaultunit" type="string">dp</property>
 	<property name="run-on-main-thread" type="bool">true</property>
+	<property name="OneSignal_AppID" type="string">your_one_signal_appid</property>
 	<ios>
 		<enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
 		<use-app-thinning>true</use-app-thinning>
@@ -59,9 +60,10 @@
 		<theme>default</theme>
 	</mobileweb>
 	<modules>
-	    <module platform="iphone" version="2.0.0">com.plotprojects.ti</module>
-		<module platform="iphone" version="3.4.0">com.pushwoosh.module</module>
-	</modules>
+    <module platform="iphone" version="2.0.0">com.plotprojects.ti</module>
+    <module platform="iphone" version="3.4.0">com.pushwoosh.module</module>
+    <module platform="iphone" version="1.7.1">com.williamrijksen.onesignal</module>
+  </modules>
 	<deployment-targets>
 		<target device="android">false</target>
 		<target device="ipad">false</target>

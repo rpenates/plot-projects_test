@@ -3,6 +3,8 @@ $.indexWindowNav.openWindow($.indexWindow);
 
 var TAG = '[index]';
 var plot = require('com.plotprojects.ti');
+// Comment toggle to activate/deactivate oneSignal module
+var oneSignal = require('com.williamrijksen.onesignal');
 
 function onOpen(viewParams) {
 	console.info('App ready');
@@ -11,8 +13,9 @@ function onOpen(viewParams) {
 
 	plot.addEventListener("plotNotificationReceived", onPlotNotification);
 
-	// Comment toggle to activate/deactivate pushwoosh
-	initPush();
+	// Comment toggle to activate/deactivate pushwoosh - oneSignal module
+	// initPush();
+	oneSignalInit();
 }
 
 function onButton1Action(btn1Params) {
@@ -51,6 +54,17 @@ function initPush() {
 
 	pw.onPushOpened(onPushEvent);
 	pw.onPushReceived(onPushEvent);
+}
+
+function oneSignalInit() {
+
+	oneSignal.promptForPushNotificationsWithUserResponse(function (obj) {
+		console.info(TAG, 'oneSignalPromtp: ' + JSON.stringify(obj));
+	});
+
+	oneSignal.addEventListener('notificationReceived', onPushEvent);
+
+	oneSignal.addEventListener('notificationOpened', onPushEvent);
 }
 
 onOpen();
