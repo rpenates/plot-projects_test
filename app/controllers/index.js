@@ -1,10 +1,10 @@
-$.indexWindowNav.open();
-$.indexWindowNav.openWindow($.indexWindow);
+$.indexWindow.open();
+// $.indexWindowNav.openWindow($.indexWindow);
 
 var TAG = '[index]';
 var plot = require('com.plotprojects.ti');
 // Comment toggle to activate/deactivate oneSignal module
-var oneSignal = require('com.williamrijksen.onesignal');
+// var oneSignal = require('com.williamrijksen.onesignal');
 
 function onOpen(viewParams) {
 	console.info('App ready');
@@ -14,8 +14,8 @@ function onOpen(viewParams) {
 	plot.addEventListener("plotNotificationReceived", onPlotNotification);
 
 	// Comment toggle to activate/deactivate pushwoosh - oneSignal module
-	// initPush();
-	oneSignalInit();
+	initPush();
+	// oneSignalInit();
 }
 
 function onButton1Action(btn1Params) {
@@ -38,8 +38,8 @@ function initPush() {
 	var pw = require('com.pushwoosh.module');
 
 	pw.initialize({
-		"application": 'your_pushwoosh_appid',
-		"gcm_project": 'your_gcm_project_id'
+		"application": '434D3-85A80',
+		"gcm_project": '836614956402'
 	});
 
 	pw.registerForPushNotifications(function (e) {
